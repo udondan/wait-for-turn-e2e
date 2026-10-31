@@ -56,7 +56,7 @@ jobs:
           HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
           SECONDS_TO_USE: ${{ vars.DEPLOY_SECONDS || '60' }}
-        run: bash scripts/use-resource.sh pipeline "$SECONDS_TO_USE"
+        run: exec bash scripts/use-resource.sh pipeline "$SECONDS_TO_USE"
 
   required:
     needs: [wait-for-turn, deploy]

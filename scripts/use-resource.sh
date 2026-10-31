@@ -44,7 +44,9 @@ trap release EXIT
 trap 'exit 130' INT TERM
 
 echo "Using resource $resource for $seconds seconds."
-sleep "$seconds"
+# In the background, so the INT/TERM trap runs right away on cancel.
+sleep "$seconds" &
+wait "$!"
 
 if [ -f fail-deploy ]; then
   echo "::error::Failing on purpose: fail-deploy exists."
