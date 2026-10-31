@@ -1,3 +1,3 @@
 # wait-for-turn e2e
 
-Throwaway repository for the end-to-end tests of [wait-for-turn](https://github.com/udondan/wait-for-turn), see test/e2e there. Changed by scripts, testing `v1.9.0`.
+Throwaway repository for the end-to-end tests of [wait-for-turn](https://github.com/udondan/wait-for-turn), see test/e2e there. Changed by scripts, testing `main`.
