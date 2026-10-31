@@ -22,7 +22,7 @@ jobs:
       group: nostatus-wait-${{ github.head_ref }}
       cancel-in-progress: true
     steps:
-      - uses: udondan/wait-for-turn@fix-merge-wait-failed-check # zizmor: ignore[unpinned-uses] the ref under test
+      - uses: udondan/wait-for-turn@e2e-both-fixes # zizmor: ignore[unpinned-uses] the ref under test
         with:
           poll-interval-seconds: ${{ vars.POLL || '10' }}
           queued-poll-interval-seconds: ${{ vars.QUEUED_POLL || '30' }}

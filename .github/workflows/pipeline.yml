@@ -20,7 +20,7 @@ jobs:
       contents: write
       pull-requests: read
       statuses: write
-    uses: udondan/wait-for-turn/.github/workflows/wait-for-turn.yml@fix-merge-wait-failed-check # zizmor: ignore[unpinned-uses] the ref under test
+    uses: udondan/wait-for-turn/.github/workflows/wait-for-turn.yml@e2e-both-fixes # zizmor: ignore[unpinned-uses] the ref under test
     with:
       label-weights: ${{ vars.LABEL_WEIGHTS }}
       no-pull-request-weight: ${{ fromJSON(vars.NO_PR_WEIGHT || '-100') }}
